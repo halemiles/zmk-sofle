@@ -28,7 +28,10 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&mt { tapping-term-ms = <200>; };
+&mt {
+    tapping-term-ms = <200>;
+    hold-trigger-on-release;
+};
 
 / {
     scroll_encoder: scroll_encoder {
