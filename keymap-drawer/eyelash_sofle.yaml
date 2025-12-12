@@ -1,37 +1,10 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   LAYER0:
-    - ESC
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-    - '5'
-    - UP ARROW
-    - '6'
-    - '7'
-    - '8'
-    - '9'
-    - '0'
-    - BACKSPACE
-    - TAB
-    - Q
-    - W
-    - E
-    - R
-    - T
-    - DOWN ARROW
-    - Y
-    - U
-    - I
-    - O
-    - P
-    - DELETE
-    - LEFT SHIFT
-    - A
-    - S
-    - D
-    - F
+  - [ESC, '1', '2', '3', '4', '5', UP ARROW, '6', '7', '8']
+  - ['9', '0', BACKSPACE, TAB, Q, W, E, R, T, DOWN ARROW]
+  - [Y, U, I, O, P, DELETE, LEFT SHIFT, A, S, D]
+  - - F
     - G
     - LEFT ARROW
     - H
@@ -41,17 +14,8 @@ layers:
     - {t: ;, h: RIGHT GUI}
     - ''''
     - LEFT CONTROL
-    - Z
-    - X
-    - C
-    - V
-    - B
-    - RIGHT ARROW
-    - N
-    - M
-    - ','
-    - .
-    - /
+  - [Z, X, C, V, B, RIGHT ARROW, N, M, ',', .]
+  - - /
     - \
     - MUTE
     - {t: '4', h: toggle}
@@ -61,22 +25,13 @@ layers:
     - Functions
     - ENTER
     - SPACE
-    - ENTER
+  - - ENTER
     - RIGHT GUI
     - Controls
     - {t: ▽, type: trans}
   Functions:
-    - ESCAPE
-    - F1
-    - F2
-    - F3
-    - F4
-    - F5
-    - '&mmv MOVE_UP'
-    - F6
-    - F7
-    - F8
-    - F9
+  - [ESCAPE, F1, F2, F3, F4, F5, '&mmv MOVE_UP', F6, F7, F8]
+  - - F9
     - F10
     - F11
     - {t: ▽, type: trans}
@@ -86,7 +41,7 @@ layers:
     - PRINTSCREEN
     - MUTE
     - '&mmv MOVE_DOWN'
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - PG UP
     - UP
     - PAGE DOWN
@@ -96,7 +51,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - PREV
-    - NEXT
+  - - NEXT
     - VOL UP
     - '&mmv MOVE_LEFT'
     - HOME
@@ -106,7 +61,7 @@ layers:
     - END
     - {t: ▽, type: trans}
     - LEFT CONTROL
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - STOP
     - PLAY PAUSE
@@ -116,7 +71,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -126,12 +81,12 @@ layers:
     - {type: held}
     - '&mkp LCLK'
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Special characters:
-    - '`'
+  - - '`'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -141,7 +96,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '-'
+  - - '-'
     - '='
     - DEL
     - {t: ▽, type: trans}
@@ -151,7 +106,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '&mmv MOVE_DOWN'
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - \
@@ -161,7 +116,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '&mmv MOVE_LEFT'
     - {t: ▽, type: trans}
@@ -171,7 +126,7 @@ layers:
     - ''''
     - '#'
     - LCTRL
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -181,7 +136,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ','
-    - .
+  - - .
     - /
     - MUTE
     - {t: ▽, type: trans}
@@ -191,12 +146,12 @@ layers:
     - {t: ▽, type: trans}
     - '&mkp LCLK'
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Controls:
-    - BT CLR
+  - - BT CLR
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
@@ -206,7 +161,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -216,7 +171,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - RGB BRD
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -226,7 +181,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - RGB EFR
     - {t: ▽, type: trans}
@@ -236,7 +191,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - LEFT CONTROL
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -246,7 +201,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -256,12 +211,12 @@ layers:
     - {t: ▽, type: trans}
     - RGB TOG
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
   '4':
-    - ESC
+  - - ESC
     - '1'
     - '2'
     - '3'
@@ -271,7 +226,7 @@ layers:
     - '6'
     - '7'
     - '8'
-    - '9'
+  - - '9'
     - '0'
     - BSPC
     - TAB
@@ -281,17 +236,8 @@ layers:
     - R
     - T
     - {t: ▽, type: trans}
-    - Y
-    - U
-    - I
-    - O
-    - P
-    - DELETE
-    - LSHFT
-    - A
-    - S
-    - D
-    - F
+  - [Y, U, I, O, P, DELETE, LSHFT, A, S, D]
+  - - F
     - G
     - {t: ▽, type: trans}
     - H
@@ -301,7 +247,7 @@ layers:
     - ;
     - ''''
     - LCTRL
-    - Z
+  - - Z
     - X
     - C
     - V
@@ -311,7 +257,7 @@ layers:
     - M
     - ','
     - .
-    - /
+  - - /
     - \
     - {t: ▽, type: trans}
     - {t: '4', h: toggle}
@@ -321,12 +267,12 @@ layers:
     - Functions
     - {t: ▽, type: trans}
     - SPACE
-    - RETURN
+  - - RETURN
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
 combos:
-  - p: [14, 28, 40]
-    k: '&soft_off'
-  - p: [36, 37]
-    k: RIGHT GUI
+- p: [14, 28, 40]
+  k: '&soft_off'
+- p: [36, 37]
+  k: RIGHT GUI
