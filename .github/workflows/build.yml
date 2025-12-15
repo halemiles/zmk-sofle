@@ -1,9 +1,10 @@
 name: Build ZMK firmware
 on:
-  pull_request:
-    types: [closed]
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - "keymap-drawer/**"
 
 jobs:
   build:
-    if: ${{ github.event.pull_request.merged && github.event.pull_request.base.ref == 'main' }}
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
