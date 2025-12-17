@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     # Option A: call reusable workflow hosted on GitHub (works only on GitHub Actions)
-    uses: miles/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
     # Option B: if running from Gitea or a non-GitHub runner, mirror the workflow into this repo:
     # .github/workflows/build-user-config.yml and use:
