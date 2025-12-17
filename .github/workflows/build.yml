@@ -7,4 +7,4 @@ on:
 
 jobs:
   build:
-    uses: https://github.com/zmkfirmware/zmk/tree/main/.github/workflows/build-user-config.yml@main # point to github
+    uses: https://raw.githubusercontent.com/zmkfirmware/zmk/refs/heads/main/.github/workflows/build-user-config.yml # point to github
