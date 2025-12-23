@@ -63,7 +63,7 @@
 &kp ESCAPE        &kp F1  &kp F2  &kp F3             &kp F4            &kp F5          &mmv MOVE_UP     &kp F6    &kp F7     &kp F8    &kp F9         &kp F10  &kp F11
 &trans            &trans  &trans  &trans             &kp PRINTSCREEN   &trans          &mmv MOVE_DOWN   &trans    &kp PG_UP  &kp UP    &kp PAGE_DOWN  &trans   &kp F12
 &kp LEFT_SHIFT    &trans  &trans  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOL_UP    &mmv MOVE_LEFT   &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT      &kp END  &trans
-&kp LEFT_CONTROL  &trans  &trans  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT      &mmv MOVE_RIGHT  &trans    &trans     &trans    &trans         &trans   &trans
+&kp LEFT_CONTROL  &trans  &trans  &kp K_PREVIOUS     &kp C_PLAY_PAUSE  &kp K_NEXT      &mmv MOVE_RIGHT  &trans    &trans     &trans    &trans         &trans   &trans
 &trans            &trans  &trans  &trans             &trans            &trans          &mkp LCLK        &trans    &trans     &trans    &trans         &trans
             >;
 
