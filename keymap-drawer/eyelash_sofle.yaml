@@ -314,7 +314,7 @@ layers:
   - {t: /, s: '?'}
   - \
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: LAYER0, h: '$$mdi:gesture-tap-hold$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - Special characters
