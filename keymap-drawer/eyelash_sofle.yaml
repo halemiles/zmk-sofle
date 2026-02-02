@@ -317,7 +317,7 @@ layers:
   - {t: LAYER0, h: '$$mdi:gesture-tap-hold$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
-  - Special characters
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:keyboard-space$$
