@@ -1,0 +1,13 @@
+name: Build ZMK firmware
+
+on:
+  push:
+
+jobs:
+  build:
+    # Option A: call reusable workflow hosted on GitHub (works only on GitHub Actions)
+    uses: ./.gitea/workflows/build-action.yml
+
+    # Option B: if running from Gitea or a non-GitHub runner, mirror the workflow into this repo:
+    # .github/workflows/build-user-config.yml and use:
+    # uses: ./.github/workflows/build-user-config.yml
