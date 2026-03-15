@@ -21,7 +21,7 @@ manifest:
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
-    - name: zmk
+    - name: zmk-darknao
       remote: darknao
       revision: rgb-layer-25.08
       import: app/west.yml
