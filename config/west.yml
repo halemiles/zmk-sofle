@@ -18,11 +18,7 @@ manifest:
       url: https://github.com/a741725193/zmk-sofle
       revision: main
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3.0
-      import: app/west.yml
-    - name: zmk-darknao
-      remote: darknao
+      url: https://github.com/darknao/zmk
       revision: rgb-layer-25.08
       import: app/west.yml
   self:
