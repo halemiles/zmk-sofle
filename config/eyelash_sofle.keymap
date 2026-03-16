@@ -45,6 +45,29 @@
     behaviors {
     };
 
+    macros {
+        rgb_layer1: rgb_layer1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(240,100,50)>;
+        };
+        rgb_layer2: rgb_layer2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(270,100,50)>;
+        };
+        rgb_layer3: rgb_layer3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,50)>;
+        };
+        rgb_layer4: rgb_layer4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(120,100,50)>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -117,6 +140,27 @@
 &kp LCTRL  &kp Z   &kp X     &kp C     &kp V   &kp B     &trans  &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
 &trans     &tog 4  &kp LALT  &kp LGUI  &mo 2   &mo 1     &trans  &kp SPACE  &kp RETURN  &trans     &trans   &trans
             >;
+        };
+    };
+
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+
+        layer1_color {
+            layers = <1>;
+            bindings = <&rgb_layer1 &rgb_ug RGB_OFF>;
+        };
+        layer2_color {
+            layers = <2>;
+            bindings = <&rgb_layer2 &rgb_ug RGB_OFF>;
+        };
+        layer3_color {
+            layers = <3>;
+            bindings = <&rgb_layer3 &rgb_ug RGB_OFF>;
+        };
+        layer4_color {
+            layers = <4>;
+            bindings = <&rgb_layer4 &rgb_ug RGB_OFF>;
         };
     };
 };
