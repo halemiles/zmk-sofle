@@ -1,5 +1,11 @@
 # Sofle
 
+## Hardware
+- Sofle layout
+- [Nice!View](https://nicekeyboards.com/docs/nice-view/) screens
+  - 160x68px resolution
+- [NiceNano v2](https://nicekeyboards.com/nice-nano/)
+
 ## Features
 ### Layers (by number)
 0. Main alphanumeric layer with basic special characters
