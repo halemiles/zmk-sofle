@@ -7,6 +7,12 @@
 2. Special characters
 3. MacOS specific layout
 
+## Hardware
+- Sofle layout
+- [Nice!View](https://nicekeyboards.com/docs/nice-view/) screens
+  - 160x68px resolution
+- [NiceNano v2](https://nicekeyboards.com/nice-nano/)
+
 ## Homerow mods
 Specific to my use case. SCAG - Shift, Control, Alt and Super (GUI)
 
