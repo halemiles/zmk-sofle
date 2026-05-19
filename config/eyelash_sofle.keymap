@@ -49,21 +49,29 @@
         rgb_layer1: rgb_layer1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(120,100,50)>;
         };
         rgb_layer2: rgb_layer2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,50)>;
         };
         rgb_layer3: rgb_layer3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(180,100,50)>;
         };
         rgb_layer4: rgb_layer4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(60,100,50)>;
         };
     };
