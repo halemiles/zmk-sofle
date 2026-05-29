@@ -43,6 +43,15 @@
         };
     };
 
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -84,11 +93,11 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_BRI  &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans          &rgb_ug RGB_BRD  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT    &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_EFR  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_CONTROL  &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_EFF  &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_BRI                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans          &rgb_ug RGB_BRD                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT    &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_COLOR_HSB(55,82,85)  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_COLOR_HSB(0,0,100)   &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_TOG                  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "Controls";
