@@ -6,7 +6,18 @@ on:
       - "keymap-drawer/**"
 
 jobs:
+  lint:
+    # Fast sanity checks that catch common footguns before spending build
+    # minutes on the firmware matrix. Extend scripts/lint-keymap.sh as needed.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint keymaps
+        run: bash scripts/lint-keymap.sh
+
   build:
+    # Gated on lint: if lint fails, the build matrix is skipped (saves minutes).
+    needs: lint
     # Option A: call reusable workflow hosted on GitHub (works only on GitHub Actions)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3-branch
 
