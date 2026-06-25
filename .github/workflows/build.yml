@@ -6,6 +6,21 @@ on:
       - "keymap-drawer/**"
 
 jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+  lint:
+    # Fast sanity checks that catch common footguns before spending build
+    # minutes on the firmware matrix. Extend scripts/lint-keymap.sh as needed.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint keymaps
+        run: bash scripts/lint-keymap.sh
 
+  build:
+    # Gated on lint: if lint fails, the build matrix is skipped (saves minutes).
+    needs: lint
+    # Option A: call reusable workflow hosted on GitHub (works only on GitHub Actions)
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3-branch
+
+    # Option B: if running from Gitea or a non-GitHub runner, mirror the workflow into this repo:
+    # .github/workflows/build-user-config.yml and use:
+    # uses: ./.github/workflows/build-user-config.yml
