@@ -68,7 +68,46 @@ include:
 
 **Fix:** Ensure the module's `zephyr/module.yml` is present and references the correct ZEPHYR_BASE.
 
-### 6. Common GitHub Actions CI Patterns
+### 6. Empty `bindings = <>;` (keymap editor placeholder)
+
+**Error:**
+```
+devicetree error: expected property 'bindings' in /macros/new_macro in
+.../empty_file.c to be assigned with 'bindings = < &foo ... &bar 1 ... >'
+(a mix of phandles and numbers), not 'bindings;'
+...
+gen_defines.py failed with return code: 1
+```
+
+**Cause:** The Nickcoutsos keymap editor (`keymap-editor[bot]` commits) inserts a
+placeholder macro when the Macros section is touched, serialized as:
+```dts
+macros {
+    new_macro: new_macro {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <>;          // empty
+        label = "NEW_MACRO";
+    };
+};
+```
+Devicetree treats an empty `<>` as an unset property (`bindings;`), and ZMK
+requires at least one binding, so `gen_defines.py` aborts *before* compilation.
+
+**Gotcha when reading logs:** on this failure the build prints the entire
+post-preprocessor keymap, so the last thing on screen is often unrelated (e.g.
+the RGB layer). Don't trust the tail — scroll up to the actual `devicetree
+error:` line, which names the offending node (`/macros/new_macro`).
+
+**Fix:** Remove the empty macro block, or give it real `bindings`. As a rule,
+never leave an empty macro/behavior in the editor before saving — colour/RGB
+changes like `&rgb_ug RGB_COLOR_HSB(h,s,b)` are fine and are not the cause.
+
+**Prevent:** run `scripts/lint-keymap.sh` before pushing (greps for
+`bindings = <>;`). Optionally add it as a CI step or pre-commit hook so it fails
+fast with a clear message instead of the devicetree dump.
+
+### 7. Common GitHub Actions CI Patterns
 
 | Symptom | Likely Cause |
 |---|---|
